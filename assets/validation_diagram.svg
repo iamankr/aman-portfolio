@@ -1,0 +1,12 @@
+<svg width="1000" height="360" viewBox="0 0 1000 360" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#22d3ee"/></linearGradient>
+  <style>.b{fill:none;stroke:url(#g);stroke-width:3}.bx{fill:#fff;fill-opacity:.7;stroke:url(#g);stroke-width:2;rx:14}</style></defs>
+  <rect x="60" y="60" width="220" height="70" class="bx"/><text x="170" y="100" text-anchor="middle" font-family="Inter" font-size="13">Rule Config (CSV/SQL)</text>
+  <rect x="330" y="60" width="220" height="70" class="bx"/><text x="440" y="100" text-anchor="middle" font-family="Inter" font-size="13">Validation Engine</text>
+  <rect x="600" y="60" width="170" height="70" class="bx"/><text x="685" y="100" text-anchor="middle" font-family="Inter" font-size="13">Errors (CSV)</text>
+  <rect x="790" y="60" width="150" height="70" class="bx"/><text x="865" y="100" text-anchor="middle" font-family="Inter" font-size="13">Metrics</text>
+  <path d="M280,95 C300,95 310,95 330,95" class="b"/>
+  <path d="M550,95 C570,95 580,95 600,95" class="b"/>
+  <path d="M770,95 C780,95 790,95 790,95" class="b"/>
+  <rect x="330" y="160" width="220" height="60" class="bx"/><text x="440" y="195" text-anchor="middle" font-family="Inter" font-size="13">Rule Types: required/allowed/date/conditional</text>
+</svg>
