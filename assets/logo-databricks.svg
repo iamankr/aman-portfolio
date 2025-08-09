@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 64">
+  <rect width="200" height="64" rx="12" fill="#fff5f3" />
+  <g fill="none" stroke="#e6231a" stroke-width="3" stroke-linejoin="round" transform="translate(14,10)">
+    <path d="M0 14 38 0 76 14 38 28z"/>
+    <path d="M0 30 38 16 76 30 38 44z"/>
+    <path d="M0 22 38 36 76 22"/>
+  </g>
+  <text x="122" y="40" text-anchor="middle" font-family="Inter,Arial" font-weight="700" font-size="18" fill="#b2221a">Databricks</text>
+</svg>

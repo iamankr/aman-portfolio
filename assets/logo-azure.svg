@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 64">
+  <rect width="200" height="64" rx="12" fill="#eef7ff"/>
+  <path d="M28 44 48 12l10 20h26L60 44z" fill="#0b57d0"/>
+  <text x="132" y="40" text-anchor="middle" font-family="Inter,Arial" font-weight="700" font-size="18" fill="#0b57d0">Azure / ADF</text>
+</svg>

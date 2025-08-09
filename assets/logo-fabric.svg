@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 64">
+  <rect width="200" height="64" rx="12" fill="#f3f6ff"/>
+  <circle cx="40" cy="22" r="10" fill="#6a5cff"/><rect x="26" y="36" width="28" height="8" rx="4" fill="#22d3ee"/>
+  <text x="128" y="40" text-anchor="middle" font-family="Inter,Arial" font-weight="700" font-size="18" fill="#4451d6">Microsoft Fabric</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 64">
+  <rect width="200" height="64" rx="12" fill="#eefcfb"/>
+  <g fill="none" stroke="#00b3a4" stroke-width="4">
+    <path d="M40 16 68 60H12z"/><path d="M40 26 54 52H26z"/>
+  </g>
+  <text x="136" y="40" text-anchor="middle" font-family="Inter,Arial" font-weight="700" font-size="18" fill="#009e91">Delta Lake</text>
+</svg>
