@@ -1,38 +1,279 @@
-/* Gamma aesthetic with alignment fixes and Tools badges */
-:root{--bg:#fffdfb;--bg-soft:#ffffff;--card:#ffffff;--text:#111827;--muted:#5b6474;--brand:#0b57d0;--brand2:#7c3aed;--border:rgba(0,0,0,.08)}
-:root.dark{--bg:#0b0d12;--bg-soft:#10141c;--card:#121826;--text:#e8ecf3;--muted:#a8b1c2;--border:rgba(255,255,255,.08)}
-*{box-sizing:border-box}
-html,body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,Segoe UI,Roboto,Arial,sans-serif}
-img{max-width:100%;height:auto}
-.container{max-width:1120px}
-h1,h2,h3,.tracking{font-family:'Space Grotesk',system-ui,Segoe UI,Roboto,Arial,sans-serif;letter-spacing:.2px}
-a{color:var(--brand);text-decoration:none}a:hover{opacity:.9}
-.navbar{background:rgba(255,255,255,.7)}.dark .navbar{background:rgba(12,14,20,.7)}
-.blur-bg{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
-.nav-link{color:var(--muted)}.nav-link.active,.nav-link:hover{color:var(--text)}
-.btn{border-radius:999px}
-.btn-primary{background:linear-gradient(90deg,var(--brand),var(--brand2));border:0}
-.btn-outline-primary{border-color:var(--brand);color:var(--brand)}.btn-outline-primary:hover{background:linear-gradient(90deg,var(--brand),var(--brand2));color:#fff}
-.btn-outline-secondary{border-color:var(--border);color:var(--text)}
-.section{padding:5rem 0}.section-title{font-weight:700;margin-bottom:1.25rem}
-.hero.gamma{position:relative;background:radial-gradient(900px 400px at 80% -10%, rgba(124,58,237,.08), transparent),radial-gradient(700px 300px at 20% 110%, rgba(34,211,238,.1), transparent)}
-.grad-text{background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.soft{background:rgba(124,58,237,.08);border:1px solid var(--border)}
-.gamma-card{background:var(--card);border:1px solid var(--border);border-radius:16px}
-.tile{background:var(--bg-soft);border:1px solid var(--border);border-radius:14px;padding:1rem;text-align:center;display:flex;align-items:center;justify-content:center;min-height:110px}
-.timeline{position:relative;margin-left:.5rem}
-.timeline::before{content:"";position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--border)}
-.timeline-item{position:relative;padding-left:2rem;margin-bottom:1.5rem}
-.timeline-dot{position:absolute;left:-1px;top:.35rem;width:14px;height:14px;background:linear-gradient(90deg,var(--brand),var(--brand2));border-radius:50%}
-.card.project{background:var(--card);border:1px solid var(--border);border-radius:16px;display:flex}
-.card.glow{box-shadow:0 10px 30px rgba(124,58,237,.12)}
-footer{border-top:1px solid var(--border)}
-.narrow{max-width:900px}
-.badges{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-@media(min-width:768px){.badges{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(min-width:1024px){.badges{grid-template-columns:repeat(4,minmax(0,1fr))}}
-.badge-card{background:var(--bg-soft);border:1px solid var(--border);border-radius:14px;padding:.75rem;display:flex;align-items:center;gap:.75rem;min-height:70px}
-.badge-card img{width:36px;height:36px}
-.badge-card .meta{line-height:1.2}
-.badge-card .title{font-weight:600}
-.badge-card .note{font-size:.85rem;color:var(--muted)}
+/* Global styles for Aman Kumar's data engineering portfolio */
+
+:root {
+    /* Color palette for light mode */
+    --primary: #2563EB; /* Indigo 600 */
+    --secondary: #DB4437; /* Databricks red */
+    --bg: #F9FAFC; /* Very light gray */
+    --fg: #1F2937; /* Slate 800 */
+    --card-bg: rgba(255,255,255,0.8);
+    --border-color: rgba(0,0,0,0.1);
+}
+
+/* Dark mode overrides applied when the `.dark` class is present on the body */
+body.dark {
+    --bg: #0E1525;
+    --fg: #E5E7EB;
+    --card-bg: rgba(255,255,255,0.05);
+    --border-color: rgba(255,255,255,0.1);
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--bg);
+    color: var(--fg);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    backdrop-filter: blur(10px);
+    background-color: var(--bg);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 100;
+}
+.navbar .brand a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+}
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.navbar .nav-links a {
+    color: var(--fg);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+.navbar .nav-links a:hover {
+    color: var(--primary);
+}
+.btn-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--fg);
+    padding: 0.25rem;
+    transition: color 0.2s ease;
+}
+.btn-toggle:hover {
+    color: var(--primary);
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    gap: 2rem;
+}
+.hero-content {
+    flex: 1;
+    min-width: 280px;
+}
+.hero h1 {
+    margin: 0 0 1rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+.hero .buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.btn-primary, .btn-outline {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    border: 2px solid var(--primary);
+}
+.btn-primary:hover {
+    /* Slightly darken primary button on hover using brightness filter */
+    filter: brightness(0.9);
+}
+.btn-outline {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+.btn-outline:hover {
+    background-color: var(--primary);
+    color: white;
+    filter: brightness(1.05);
+}
+
+/* Tools section */
+.tools {
+    padding: 4rem 2rem;
+    background-color: var(--bg);
+}
+.tools h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+.tool-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(4px);
+}
+.tool-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+.tool-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+.tool-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--fg);
+}
+
+/* Section general styling for other pages */
+.section {
+    padding: 3rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.section h1, .section h2 {
+    margin-bottom: 1rem;
+}
+.section p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Project list cards */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.project-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+.project-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.project-card p {
+    flex-grow: 1;
+}
+.project-card a {
+    margin-top: 1rem;
+    align-self: flex-start;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/* Timeline styles for experience page */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--primary);
+}
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -0.5rem;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    background-color: var(--primary);
+    border-radius: 50%;
+}
+.timeline-item h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+.timeline-item span {
+    font-size: 0.9rem;
+    color: var(--primary);
+}
+.timeline-item p {
+    margin-top: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--fg);
+}
+.footer a {
+    color: var(--primary);
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+.footer a:hover {
+    text-decoration: underline;
+}

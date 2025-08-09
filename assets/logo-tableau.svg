@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 64">
-  <rect width="200" height="64" rx="12" fill="#eef5ff"/>
-  <g fill="#2c6bed" transform="translate(26,12)">
-    <rect x="12" y="0" width="4" height="12" rx="2"/><rect x="8" y="4" width="12" height="4" rx="2"/>
-    <rect x="32" y="10" width="4" height="12" rx="2"/><rect x="28" y="14" width="12" height="4" rx="2"/>
-    <rect x="20" y="18" width="4" height="12" rx="2"/><rect x="16" y="22" width="12" height="4" rx="2"/>
-  </g>
-  <text x="132" y="40" text-anchor="middle" font-family="Inter,Arial" font-weight="700" font-size="18" fill="#2c6bed">Tableau</text>
-</svg>
